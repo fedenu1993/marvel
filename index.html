@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-header">
+            <img src="imagenes/Marvel_Logo.svg.png" alt="Marvel-logo">
+        </div>
+        <div class="menu">
+            <a href=""><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="header-barra">
+            <a class="header-barra-elements" href="#series-container">Series</a>
+            <a class="header-barra-elements" href="#charactersSearch">Search Character</a>
+            <a class="header-barra-elements" href="#someCharacters">Some Characters</a>
+        </div>
+    </header>
+
+    <div id="series-container" class="series-container">
+        <button id="flecha-izq" class="button-left">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="container-principal">
+            <div class="series" id="series"></div>
+        </div>
+        <button id="flecha-der" class="button-right">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <div id="charactersSearch" class="characters-search">
+        <div class="inputSearch">
+            <i class="fas fa-search"></i>
+            <input id="search" type="search" placeholder="Enter a Heroe. For example: Iron Man">
+            <!-- <div id="results">
+                <p>Caca</p>
+                <p>Caca</p>
+
+                <p>Caca</p>
+
+                <p>Caca</p>
+
+                <p>Caca</p>
+
+            </div> -->
+        </div>
+        <div id="pj" class="pj">
+          
+        </div>
+    </div>
+
+    <h2 id="someCharacters" class="someCharacters">Some Characters</h2>
+    <div class="characters" id="characters"></div>
+
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/FedeNu/" target="_blank"><i class="icono fab fa-facebook-square"></i></a>
+            <a href="https://www.youtube.com/channel/UCnwwjCV7KyHYlNRUCgrpQQQ" target="_blank"><i class="fab fa-youtube-square"></i></a>
+            <a href="https://www.instagram.com/fede_nu_/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="mailto:fedenu1993@gmail.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://www.linkedin.com/in/federico-nu%C3%B1ez-04130b188/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-barra">
+            <p>Hecho a mano por Federico Nuñez</p>
+        </div>
+    </footer>
+
+</body>
+<script src="main.js"></script>
+</html>
