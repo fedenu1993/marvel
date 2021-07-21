@@ -7,7 +7,7 @@ const hash = "e2458a9cf1c7e839361b093d7ec79552";
 
 let seriesHtml = "";
 let offsetSe = parseInt(Math.random()*(53-0)-0);
-const urlSeries = `http://gateway.marvel.com/v1/public/events?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetSe}`;
+const urlSeries = `https://gateway.marvel.com/v1/public/events?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetSe}`;
 let series = document.getElementById("series");
 fetch(urlSeries)
 .then(response => response.json())
@@ -57,7 +57,7 @@ const pj = document.getElementById("pj");
 const results = document.getElementById("results");
 const searchHero = nombreHeroe => {
     heroe = encodeURIComponent(nombreHeroe);
-    const urlPj = `http://gateway.marvel.com/v1/public/characters?name=${heroe}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const urlPj = `https://gateway.marvel.com/v1/public/characters?name=${heroe}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     let pjHtml = "";
     fetch(urlPj)
     .then(response => response.json())
@@ -90,7 +90,7 @@ let charactersHtml = "";
 // Datos totales 1493
 
 let offsetCha = parseInt(Math.random()*(1473-0)-0);
-const urlCharacters = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetCha}`;
+const urlCharacters = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetCha}`;
 let characters = document.getElementById("characters");
 fetch(urlCharacters)
 .then(response => response.json())
