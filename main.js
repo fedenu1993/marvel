@@ -7,14 +7,11 @@ const hash = "e2458a9cf1c7e839361b093d7ec79552";
 
 let seriesHtml = "";
 let offsetSe = parseInt(Math.random()*(53-0)-0);
-const urlSeries = `https://gateway.marvel.com/v1/public/events?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetSe}`;
+const urlSeries = `http://gateway.marvel.com/v1/public/events?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetSe}`;
 let series = document.getElementById("series");
-fetch(urlSeries, {
-    credentials: 'same-origin'
-  })
+fetch(urlSeries)
 .then(response => response.json())
 .then(response => {
-    console.log(response);
     response.data.results.forEach(series => {
         let seriesDescription;
         let string = series.description;
@@ -59,11 +56,9 @@ const pj = document.getElementById("pj");
 const results = document.getElementById("results");
 const searchHero = nombreHeroe => {
     heroe = encodeURIComponent(nombreHeroe);
-    const urlPj = `https://gateway.marvel.com/v1/public/characters?name=${heroe}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const urlPj = `http://gateway.marvel.com/v1/public/characters?name=${heroe}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     let pjHtml = "";
-    fetch(urlPj, {
-        credentials: 'same-origin'
-      })
+    fetch(urlPj)
     .then(response => response.json())
     .then(response => {
         response.data.results.forEach(personaje => {
@@ -94,11 +89,9 @@ let charactersHtml = "";
 // Datos totales 1493
 
 let offsetCha = parseInt(Math.random()*(1473-0)-0);
-const urlCharacters = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetCha}`;
+const urlCharacters = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetCha}`;
 let characters = document.getElementById("characters");
-fetch(urlCharacters, {
-    credentials: 'same-origin'
-  })
+fetch(urlCharacters)
 .then(response => response.json())
 .then(response => {
     response.data.results.forEach(hero => {
