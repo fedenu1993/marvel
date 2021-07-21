@@ -9,7 +9,9 @@ let seriesHtml = "";
 let offsetSe = parseInt(Math.random()*(53-0)-0);
 const urlSeries = `https://gateway.marvel.com/v1/public/events?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetSe}`;
 let series = document.getElementById("series");
-fetch(urlSeries)
+fetch(urlSeries, {
+    credentials: 'same-origin'
+  })
 .then(response => response.json())
 .then(response => {
     console.log(response);
@@ -59,7 +61,9 @@ const searchHero = nombreHeroe => {
     heroe = encodeURIComponent(nombreHeroe);
     const urlPj = `https://gateway.marvel.com/v1/public/characters?name=${heroe}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     let pjHtml = "";
-    fetch(urlPj)
+    fetch(urlPj, {
+        credentials: 'same-origin'
+      })
     .then(response => response.json())
     .then(response => {
         response.data.results.forEach(personaje => {
@@ -92,7 +96,9 @@ let charactersHtml = "";
 let offsetCha = parseInt(Math.random()*(1473-0)-0);
 const urlCharacters = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&offset=${offsetCha}`;
 let characters = document.getElementById("characters");
-fetch(urlCharacters)
+fetch(urlCharacters, {
+    credentials: 'same-origin'
+  })
 .then(response => response.json())
 .then(response => {
     response.data.results.forEach(hero => {
